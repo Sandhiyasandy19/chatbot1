@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
     <title>Lincoln Chatbot</title>
@@ -6,40 +6,31 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
-
-            /* Background image */
-            background: url('bg.png') no-repeat center center;
-            background-size: cover;
             font-family: Arial, sans-serif;
-        }
 
-        /* Optional: container for the chatbot */
-        #chatbot-container {
-            position: fixed;
-            bottom: 20px;  /* adjust position */
-            right: 20px;
-            z-index: 1000; /* ensure it appears on top of background */
+            /* 🔥 Use your background image */
+            background-image: url("bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <!-- Chatbot placeholder -->
-    <div id="chatbot-container"></div>
 
-    <!-- Example Bot Script -->
+    <!-- No text here since your image already contains the welcome words -->
+
+    <!-- Chatbase Script -->
     <script>
-        (function() {
-            // Example: embed chatbot iframe
-            const container = document.getElementById('chatbot-container');
-            const iframe = document.createElement('iframe');
-            iframe.src = "https://sandhiyasandy19.github.io/chat-bot/"; // replace with your bot URL
-            iframe.width = "350";
-            iframe.height = "500";
-            iframe.style.border = "none";
-            iframe.style.borderRadius = "10px";
-            container.appendChild(iframe);
-        })();
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="lJ24nmTc6-9m4Z7kpz3vs";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
+
 </body>
 </html>
