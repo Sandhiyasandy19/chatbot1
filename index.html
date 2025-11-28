@@ -6,33 +6,40 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            height: 100vh;
 
-            /* Use your actual image path here */
-            background-image: url('bg.png');
-            background-size: cover;          /* make it cover full page */
-            background-position: center;     /* center the image */
-            background-repeat: no-repeat;    /* don’t tile it */
-            height: 100vh;                   /* make body full height */
+            /* Background image */
+            background: url('bg.png') no-repeat center center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
         }
 
-        .center-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            font-size: 2em;
-            font-weight: bold;
-            text-shadow: 1px 1px 5px black; /* optional for contrast */
+        /* Optional: container for the chatbot */
+        #chatbot-container {
+            position: fixed;
+            bottom: 20px;  /* adjust position */
+            right: 20px;
+            z-index: 1000; /* ensure it appears on top of background */
         }
     </style>
 </head>
 <body>
-    <div class="center-text">
-        Welcome - Accenture x Lincoln<br>
-        Lincoln Chatbot
-    </div>
+    <!-- Chatbot placeholder -->
+    <div id="chatbot-container"></div>
+
+    <!-- Example Bot Script -->
+    <script>
+        (function() {
+            // Example: embed chatbot iframe
+            const container = document.getElementById('chatbot-container');
+            const iframe = document.createElement('iframe');
+            iframe.src = "https://sandhiyasandy19.github.io/chat-bot/"; // replace with your bot URL
+            iframe.width = "350";
+            iframe.height = "500";
+            iframe.style.border = "none";
+            iframe.style.borderRadius = "10px";
+            container.appendChild(iframe);
+        })();
+    </script>
 </body>
 </html>
