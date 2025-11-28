@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Lincoln Chatbot</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
 
-            /* Correct background */
-            background-image: url("https://raw.githubusercontent.com/sandhiyasandy19/chat-bot/main/bg.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            /* Use your actual image path here */
+            background-image: url('bg.png');
+            background-size: cover;          /* make it cover full page */
+            background-position: center;     /* center the image */
+            background-repeat: no-repeat;    /* don’t tile it */
+            height: 100vh;                   /* make body full height */
+        }
 
-            height: 100vh;
-            color: #ffffff;
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px black; /* optional for contrast */
         }
     </style>
 </head>
 <body>
-
-    <!-- Chatbase Script -->
-    <script>
-    (function(){
-        if(!window.chatbase || window.chatbase("getState") !== "initialized") {
-            window.chatbase = (...arguments) => {
-                if(!window.chatbase.q) { window.chatbase.q = [] }
-                window.chatbase.q.push(arguments)
-            };
-            window.chatbase = new Proxy(window.chatbase, {
-                get(target, prop) {
-                    if(prop === "q") { return target.q }
-                    return (...args) => target(prop, ...args)
-                }
-            });
-        }
-        
-        const onLoad = function() {
-            const script = document.createElement("script");
-            script.src = "https://www.chatbase.co/embed.min.js";
-            script.id = "lJ24nmTc6-9m4Z7kpz3vs";
-            script.domain = "www.chatbase.co";
-            document.body.appendChild(script);
-        };
-        
-        if(document.readyState === "complete") {
-            onLoad();
-        } else {
-            window.addEventListener("load", onLoad)
-        }
-    })();
-    </script>
-
+    <div class="center-text">
+        Welcome - Accenture x Lincoln<br>
+        Lincoln Chatbot
+    </div>
 </body>
 </html>
